@@ -1,0 +1,31 @@
+Steps:
+1. npm init --y
+2. install nodemon , ia bisa dikatakan wajib digunakan selama proses pengembangan. Pasalnya, dengan tools ini kita tak perlu menjalankan ulang server ketika terjadi perubahan pada berkas JavaScript. 
+3. install eslinta dapat membantu atau membimbing Anda untuk selalu menuliskan kode JavaScript dengan gaya yang konsisten. Seperti yang Anda tahu, JavaScript tidak memiliki aturan yang baku untuk gaya penulisan kode, bahkan penggunaan semicolon. Karena itu, terkadang kita jadi tidak konsisten dalam menuliskannya.
+4. Sebelum digunakan, Anda perlu melakukan konfigurasi terlebih dahulu. Caranya dengan menggunakan perintah berikut di Terminal proyek.
+npx eslint --init
+
+eslint question
+How would you like to use ESLint? -> To check, find problems, and enforce code style.
+What type of modules does your project use? -> CommonJS (require/exports).
+Which framework did you use? -> None of these. 
+Does your project use TypeScript? -> N.
+Where does your code run? -> Node (pilih menggunakan spasi).
+How would you like to define a style for your project? -> Use a popular style guide.
+Which style guide do you want to follow? -> (Anda bebas memilih, sebagai contoh pilih AirBnB).
+What format do you want your config file to be in? -> JSON.
+Would you like to …… (seluruh pertanyaan selanjutnya) -> Y.
+
+5. handler untuk menghandle request body
+6. notes untuk menyimpan format body, Kita hanya mendapatkan nilai title, tags, dan body dari client
+7. npm install nanoid
+8. Instance aws ec3 command ssh
+ssh -i "notes-api-webserver.pem" ubuntu@ec2-13-212-85-89.ap-southeast-1.compute.amazonaws.com
+9. Setting jika ssh error
+$path = ".\notes-api-webserver.pem"
+# Reset to remove explicit permissions
+icacls.exe $path /reset
+# Give current user explicit read-permission
+icacls.exe $path /GRANT:R "$($env:USERNAME):(R)"
+# Disable inheritance and remove inherited permissions
+icacls.exe $path /inheritance:r
